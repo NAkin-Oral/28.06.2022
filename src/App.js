@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Swipper from './Swipper';
+import { Data } from './Data';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
+  console.log(Data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-warning">
+      {Data.map((item, index) => (
+        <Swipper {...item} key={index} />
+      ))}
     </div>
   );
 }
