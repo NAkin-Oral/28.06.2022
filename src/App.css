@@ -8,21 +8,45 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   overflow-x: hidden;
 }
 
+.title {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.3rem;
+}
+
+.lang {
+  font-size: 4rem;
+  color: rgb(48, 185, 112);
+}
+
 .App {
-  width: 200vh;
-  height: 100%;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.cube-container {
+  margin: 0;
+  width: fit-content;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper {
-  width: 150px;
-  height: 150px;
+  width: 10rem;
+  height: 10rem;
   margin-bottom: 1.5rem;
 }
 
@@ -41,4 +65,27 @@ body {
 
 .swiper h1 {
   font-size: 15px;
+}
+
+@media (max-width: 550px) {
+  .swiper {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+  }
+  .lang {
+    font-size: 2rem;
+    color: rgb(48, 185, 112);
+  }
+}
+@media (max-height: 600px) {
+  .swiper {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+  }
+  .lang {
+    font-size: 2rem;
+    color: rgb(48, 185, 112);
+  }
 }

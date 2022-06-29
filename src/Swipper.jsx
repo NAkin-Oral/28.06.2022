@@ -15,15 +15,15 @@ const Swipper = Data => {
   console.log(Data);
   const { logo, usage, year, creator } = Data;
   return (
-    <div>
+    <div className="cube-container">
       <Swiper
         effect={'cube'}
         grabCursor={true}
         cubeEffect={{
           shadow: true,
           slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
+          // shadowOffset: 20,
+          // shadowScale: 0.94,
         }}
         pagination={true}
         modules={[EffectCube, Pagination]}
