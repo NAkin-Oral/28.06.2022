@@ -1,18 +1,25 @@
 import './App.css';
 import Swipper from './Swipper';
 import { Data } from './Data';
-import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   console.log(Data);
   return (
-    <div>
-      <div className="title bg-primary m-0  text-center">
-        <h1 className="lang">Languages</h1>
+    <div className="main">
+      <div className="logo">
+        <img
+          src="https://lang-cards.netlify.app/static/media/react.7b78f5c3c3acf6dd7722fd9c2f83c963.svg"
+          alt="react logo"
+        />
       </div>
-      <div className="App bg-warning">
-        {Data.map((item, index) => (
-          <Swipper {...item} key={index} />
-        ))}
+      <div className="container">
+        <div className="title">
+          <h1 className="lang">Languages</h1>
+        </div>
+        <div className="App">
+          {Data.map((item, index) => (
+            <Swipper {...item} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );
