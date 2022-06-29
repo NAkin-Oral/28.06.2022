@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   console.log(Data);
   return (
-    <div className="App bg-warning">
+    <div className="App bg-warning d-grid">
       {Data.map((item, index) => (
         <Swipper {...item} key={index} />
       ))}

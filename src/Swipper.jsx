@@ -15,7 +15,7 @@ const Swipper = Data => {
   console.log(Data);
   const { logo, usage, year, creator } = Data;
   return (
-    <>
+    <div>
       <Swiper
         effect={'cube'}
         grabCursor={true}
@@ -29,7 +29,7 @@ const Swipper = Data => {
         modules={[EffectCube, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide className="text-center">
+        <SwiperSlide className=" bg-light text-center">
           <img src={logo} alt="Computer Language" />
         </SwiperSlide>
         <SwiperSlide className="text-center bg-info">
@@ -49,7 +49,7 @@ const Swipper = Data => {
           </h1>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 
